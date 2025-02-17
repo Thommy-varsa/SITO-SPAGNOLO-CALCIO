@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Fútbol Europeo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>⚽ EuroFootball Info</h1>
+        </div>
+        <ul class="menu">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#leagues">Ligas</a></li>
+            <li><a href="#teams">Equipos</a></li>
+            <li><a href="#history">Historia</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="content">
+            <h1>Bienvenido a EuroFootball Info</h1>
+            <p>Descubre las mejores ligas y equipos del fútbol europeo.</p>
+            <button id="toggle-leagues-btn">Explora Ligas</button>
+        </div>
+    </section>
+
+    <!-- Sección de Ligas -->
+    <section id="leagues" class="leagues" style="display: none;">
+        <h2>Ligas Principales</h2>
+        <div class="league-cards">
+            <div class="card" onclick="showLeague('serieA')">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.9lUHErT_JMoBhEqvBYLSIAHaE8%26pid%3DApi%26h%3D160&f=1&ipt=f461167c71dbc745163f7e9e426f19acbf203b5fb4d08a4a56a20ac082ec239c&ipo=images" alt="Serie A">
+                <h3>Serie A</h3>
+            </div>
+            <div class="card" onclick="showLeague('premierLeague')">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.fzQM7XKPkUuzXt54B33O5QHaGD%26pid%3DApi%26h%3D160&f=1&ipt=e38f00f67a148e39f9188ed16d49b584f201190aa8f0136b89c54cd21b2994aa&ipo=images" alt="Premier League">
+                <h3>Premier League</h3>
+            </div>
+            <div class="card" onclick="showLeague('laliga')">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Qo9HgYxvgb8r1raoDNmZQgHaHa%26pid%3DApi&f=1&ipt=8b814012c4e2fa0309d6b396c0b8848c7bd4cd34c8007d4877cdeb59889796c8&ipo=images" alt="LaLiga">
+                <h3>LaLiga</h3>
+            </div>
+            <div class="card" onclick="showLeague('bundesliga')">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP._jBw_uMwn2o0p8c9rQSRngHaHa%26pid%3DApi%26h%3D160&f=1&ipt=0719f521a6a90cb5a1bdcccb019d0303ee2218008a07d774651a00afee432ca9&ipo=images" alt="Bundesliga">
+                <h3>Bundesliga</h3>
+            </div>
+            <div class="card" onclick="showLeague('ligue1')">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.xbyBl5lXOpRfzZQ2j04pgAHaJW%26pid%3DApi%26h%3D160&f=1&ipt=4edbbfc1230dd1f6aeec4099033af5c1f4c6763cb6d78dc0f36bceb96bb6c8f1&ipo=images" alt="Ligue 1">
+                <h3>Ligue 1</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Equipos -->
+    <section id="teams" class="teams">
+        <h2 id="league-title"></h2>
+        <div id="teams-list"></div>
+    </section>
+
+    <!-- Sección Histórica -->
+    <section id="history" class="history">
+        <h2>Historia del Fútbol Europeo</h2>
+        <p>
+            El fútbol europeo tiene una rica historia que abarca más de un siglo. Desde sus humildes comienzos hasta los modernos campeonatos profesionales,
+            el fútbol ha evolucionado en uno de los deportes más populares del mundo. Las principales ligas europeas, como la Serie A, la Premier League,
+            LaLiga, la Bundesliga y la Ligue 1, han dado vida a algunos de los momentos más memorables del deporte.
+        </p>
+        <p>
+            Cada liga tiene su propia identidad y tradición, desde los clásicos de España (Real Madrid vs Barcelona) hasta los derby inglesi (Manchester United vs Liverpool).
+            Explora las ligas y descubre la magia detrás de cada equipo.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Acerca de Nosotros</h3>
+                <p>EuroFootball Info es tu portal para todo lo relacionado con el fútbol europeo. Descubre ligas, equipos y estadísticas.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#leagues">Ligas</a></li>
+                    <li><a href="#teams">Equipos</a></li>
+                    <li><a href="#history">Historia</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p>Email: varsallona.thomas@itisgrassi.edu.it</p>
+                <p>Teléfono: +39 334 828 5439</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 EuroFootball Info. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
